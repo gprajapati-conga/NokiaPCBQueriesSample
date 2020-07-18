@@ -1,0 +1,45 @@
+{
+  "attributes": {
+    "type": "Apttus_Proposal__Proposal__c",
+    "url": "/services/data/v48.0/sobjects/Apttus_Proposal__Proposal__c/a3k3h00000001rzAAA"
+  },
+  "Id": "a3k3h00000001rzAAA",
+  "NokiaCPQ_Portfolio__c": null,
+  "NokiaCPQ_LEO_Discount__c": false,
+  "NokiaCPQ_No_of_Years__c": null,
+  "Apttus_Proposal__Account__r": {
+    "attributes": {
+      "type": "Account",
+      "url": "/services/data/v48.0/sobjects/Account/0014100000LURgrAAH"
+    },
+    "L7Name__c": "EUR WCE Altice/SFR CT France",
+    "GEOLevel1ID__c": "RG_EUROPE",
+    "Partner_Program__c": null,
+    "Partner_Type__c": null,
+    "CountryCode__c": "FR",
+    "NokiaCPQ_Renewal__c": false,
+    "NokiaCPQ_Attachment__c": false,
+    "NokiaCPQ_Performance__c": false
+  },
+  "Is_List_Price_Only__c": false,
+  "NokiaCPQ_Maintenance_Type__c": null,
+  "NokiaCPQ_SSP_Level__c": null,
+  "NokiaCPQ_SRS_Level__c": "Unlimited",
+  "CurrencyIsoCode": "EUR",
+  "Quote_Type__c": "Direct DS",
+  "Exchange_Rate__c": null,
+  "NokiaProductAccreditation__c": null,
+  "NokiaCPQ_Maintenance_Accreditation__c": null,
+  "NokiaCPQ_Maintenance_Level__c": "No",
+  "NokiaCPQ_IsPMA__c": false,
+  "NokiaCPQ_Maintenance_Accreditation__r": null,
+  "NokiaProductAccreditation__r": null,
+  "NokiaCPQ_Existing_IONMaint_Contract__c": null,
+  "Account_Market__c": "Market Europe",
+  "Maintenance_Y1__c": null,
+  "Maintenance_Y2__c": null,
+  "SSP__c": null,
+  "SRS__c": null,
+  "NokiaCPQ_Is_Maintenance_Quote__c": false,
+  "Warranty_credit__c": null
+}

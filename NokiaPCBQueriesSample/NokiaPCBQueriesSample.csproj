@@ -1,0 +1,120 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Fields\**" />
+    <EmbeddedResource Remove="Fields\**" />
+    <None Remove="Fields\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Sample.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Data\DirectCPQ_NokiaSoftware\LineItems.json" />
+    <None Remove="Data\DirectCPQ_NokiaSoftware\Proposal.json" />
+    <None Remove="Data\DirectCPQ_QTC\LineItems.json" />
+    <None Remove="Data\DirectCPQ_QTC\Proposal.json" />
+    <None Remove="Data\DirectCPQ_IPRouting\LineItems.json" />
+    <None Remove="Data\DirectCPQ_IPRouting\Proposal.json" />
+    <None Remove="Data\DirectCPQ_AirscaleWifi\LineItems.json" />
+    <None Remove="Data\DirectCPQ_AirscaleWifi\Proposal.json" />
+    <None Remove="Data\DirectDS\LineItems.json" />
+    <None Remove="Data\DirectDS\Proposal.json" />
+    <None Remove="Data\IndirectCPQ-507\LineItems.json" />
+    <None Remove="Data\IndirectCPQ-507\Proposal.json" />
+    <None Remove="Data\IndirectCPQ_FixedAccess_FBA\LineItems.json" />
+    <None Remove="Data\IndirectCPQ_FixedAccess_FBA\Proposal.json" />
+    <None Remove="Data\IndirectCPQ_Nuage\LineItems.json" />
+    <None Remove="Data\IndirectCPQ_Nuage\Proposal.json" />
+    <None Remove="Data\IndirectDS\LineItems.json" />
+    <None Remove="Data\IndirectDS\Proposal.json" />
+    <None Remove="Data\LineItems.json" />
+    <None Remove="Data\Proposal.json" />
+    <None Remove="NokiaPCBQueriesSample.zip" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Data\DirectCPQ_AirscaleWifi\NokiaSoftware\LineItems.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\DirectCPQ_AirscaleWifi\NokiaSoftware\Proposal.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\DirectCPQ_AirscaleWifi\QTC\LineItems.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\DirectCPQ_AirscaleWifi\QTC\Proposal.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\DirectCPQ_AirscaleWifi\IPRouting\LineItems.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\DirectCPQ_AirscaleWifi\IPRouting\Proposal.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\DirectCPQ_AirscaleWifi\AirscaleWifi\LineItems.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\DirectCPQ_AirscaleWifi\AirscaleWifi\Proposal.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\DirectDS\LineItems.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\DirectDS\Proposal.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\IndirectCPQ-507\LineItems.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\IndirectCPQ-507\Proposal.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\IndirectCPQ_FixedAccess_FBA\LineItems.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\IndirectCPQ_FixedAccess_FBA\Proposal.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\IndirectCPQ_Nuage\LineItems.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\IndirectCPQ_Nuage\Proposal.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\IndirectCPQ\LineItems.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\IndirectCPQ\Proposal.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\IndirectDS\LineItems.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\IndirectDS\Proposal.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Apttus.Lightsaber.Extensibility" Version="2001.0.1.26" />
+    <PackageReference Include="Apttus.Lightsaber.MongoProvider" Version="1.0.0.26" />
+    <PackageReference Include="Apttus.Lightsaber.Pricing.Common" Version="2020.8.0.21" />
+    <PackageReference Include="Apttus.OpenTracingTelemetry" Version="1.0.0.15" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\DirectCPQ_IPRouting\" />
+    <Folder Include="Data\DirectCPQ_NokiaSoftware\" />
+    <Folder Include="Data\DirectCPQ_QTC\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+
+</Project>

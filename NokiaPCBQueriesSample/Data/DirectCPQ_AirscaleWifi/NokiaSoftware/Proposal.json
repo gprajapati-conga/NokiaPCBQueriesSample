@@ -1,0 +1,45 @@
+{
+  "attributes": {
+    "type": "Apttus_Proposal__Proposal__c",
+    "url": "/services/data/v48.0/sobjects/Apttus_Proposal__Proposal__c/a3k3h00000004BcAAI"
+  },
+  "Id": "a3k3h00000004BcAAI",
+  "NokiaCPQ_Portfolio__c": "Nokia Software",
+  "NokiaCPQ_LEO_Discount__c": false,
+  "NokiaCPQ_No_of_Years__c": "3",
+  "Apttus_Proposal__Account__r": {
+    "attributes": {
+      "type": "Account",
+      "url": "/services/data/v48.0/sobjects/Account/0012M00002Ci1jOQAR"
+    },
+    "L7Name__c": "TEST",
+    "GEOLevel1ID__c": "RG_NAM",
+    "Partner_Program__c": null,
+    "Partner_Type__c": null,
+    "CountryCode__c": "US",
+    "NokiaCPQ_Renewal__c": false,
+    "NokiaCPQ_Attachment__c": false,
+    "NokiaCPQ_Performance__c": false
+  },
+  "Is_List_Price_Only__c": false,
+  "NokiaCPQ_Maintenance_Type__c": null,
+  "NokiaCPQ_SSP_Level__c": null,
+  "NokiaCPQ_SRS_Level__c": null,
+  "CurrencyIsoCode": "USD",
+  "Quote_Type__c": "Direct CPQ",
+  "Exchange_Rate__c": 1.0935,
+  "NokiaProductAccreditation__c": null,
+  "NokiaCPQ_Maintenance_Accreditation__c": null,
+  "NokiaCPQ_Maintenance_Level__c": "No",
+  "NokiaCPQ_IsPMA__c": false,
+  "NokiaCPQ_Maintenance_Accreditation__r": null,
+  "NokiaProductAccreditation__r": null,
+  "NokiaCPQ_Existing_IONMaint_Contract__c": "Yes",
+  "Account_Market__c": "Market North America",
+  "Maintenance_Y1__c": null,
+  "Maintenance_Y2__c": null,
+  "SSP__c": null,
+  "SRS__c": null,
+  "NokiaCPQ_Is_Maintenance_Quote__c": false,
+  "Warranty_credit__c": null
+}
