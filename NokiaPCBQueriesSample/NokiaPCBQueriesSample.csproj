@@ -16,22 +16,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="Data\DirectCPQ_NokiaSoftware\LineItems.json" />
-    <None Remove="Data\DirectCPQ_NokiaSoftware\Proposal.json" />
-    <None Remove="Data\DirectCPQ_QTC\LineItems.json" />
-    <None Remove="Data\DirectCPQ_QTC\Proposal.json" />
-    <None Remove="Data\DirectCPQ_IPRouting\LineItems.json" />
-    <None Remove="Data\DirectCPQ_IPRouting\Proposal.json" />
-    <None Remove="Data\DirectCPQ_AirscaleWifi\LineItems.json" />
-    <None Remove="Data\DirectCPQ_AirscaleWifi\Proposal.json" />
+    <None Remove="Data\DirectCPQ\LineItems.json" />
+    <None Remove="Data\DirectCPQ\Proposal.json" />
     <None Remove="Data\DirectDS\LineItems.json" />
     <None Remove="Data\DirectDS\Proposal.json" />
-    <None Remove="Data\IndirectCPQ-507\LineItems.json" />
-    <None Remove="Data\IndirectCPQ-507\Proposal.json" />
-    <None Remove="Data\IndirectCPQ_FixedAccess_FBA\LineItems.json" />
-    <None Remove="Data\IndirectCPQ_FixedAccess_FBA\Proposal.json" />
-    <None Remove="Data\IndirectCPQ_Nuage\LineItems.json" />
-    <None Remove="Data\IndirectCPQ_Nuage\Proposal.json" />
+    <None Remove="Data\IndirectCPQ\FixedAccess-POL - 15Lines\LineItems.json" />
+    <None Remove="Data\IndirectCPQ\FixedAccess-POL - 15Lines\Proposal.json" />
+    <None Remove="Data\IndirectCPQ\POSTTest\LineItems.json" />
+    <None Remove="Data\IndirectCPQ\POSTTest\Proposal.json" />
     <None Remove="Data\IndirectDS\LineItems.json" />
     <None Remove="Data\IndirectDS\Proposal.json" />
     <None Remove="Data\LineItems.json" />
@@ -40,28 +32,28 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Data\DirectCPQ_AirscaleWifi\NokiaSoftware\LineItems.json">
+    <Content Include="Data\DirectCPQ\NokiaSoftware\LineItems.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\DirectCPQ_AirscaleWifi\NokiaSoftware\Proposal.json">
+    <Content Include="Data\DirectCPQ\NokiaSoftware\Proposal.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\DirectCPQ_AirscaleWifi\QTC\LineItems.json">
+    <Content Include="Data\DirectCPQ\QTC\LineItems.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\DirectCPQ_AirscaleWifi\QTC\Proposal.json">
+    <Content Include="Data\DirectCPQ\QTC\Proposal.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\DirectCPQ_AirscaleWifi\IPRouting\LineItems.json">
+    <Content Include="Data\DirectCPQ\IPRouting\LineItems.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\DirectCPQ_AirscaleWifi\IPRouting\Proposal.json">
+    <Content Include="Data\DirectCPQ\IPRouting\Proposal.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\DirectCPQ_AirscaleWifi\AirscaleWifi\LineItems.json">
+    <Content Include="Data\DirectCPQ\AirscaleWifi\LineItems.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\DirectCPQ_AirscaleWifi\AirscaleWifi\Proposal.json">
+    <Content Include="Data\DirectCPQ\AirscaleWifi\Proposal.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Data\DirectDS\LineItems.json">
@@ -70,28 +62,40 @@
     <Content Include="Data\DirectDS\Proposal.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\IndirectCPQ-507\LineItems.json">
+    <Content Include="Data\IndirectCPQ\FixedAccess-POL - 15Lines\LineItems.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\IndirectCPQ-507\Proposal.json">
+    <Content Include="Data\IndirectCPQ\FixedAccess-POL - 15Lines\Proposal.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\IndirectCPQ_FixedAccess_FBA\LineItems.json">
+    <Content Include="Data\IndirectCPQ\POSTTest\LineItems.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\IndirectCPQ_FixedAccess_FBA\Proposal.json">
+    <Content Include="Data\IndirectCPQ\POSTTest\Proposal.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\IndirectCPQ_Nuage\LineItems.json">
+    <Content Include="Data\IndirectCPQ\IPRouting\LineItems.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\IndirectCPQ_Nuage\Proposal.json">
+    <Content Include="Data\IndirectCPQ\IPRouting\Proposal.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\IndirectCPQ\LineItems.json">
+    <Content Include="Data\IndirectCPQ\FixedAccess-FBA\LineItems.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\IndirectCPQ\Proposal.json">
+    <Content Include="Data\IndirectCPQ\FixedAccess-FBA\Proposal.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\IndirectCPQ\Nuage\LineItems.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\IndirectCPQ\Nuage\Proposal.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\IndirectCPQ\FixedAccess-POL\LineItems.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\IndirectCPQ\FixedAccess-POL\Proposal.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Data\IndirectDS\LineItems.json">
@@ -111,9 +115,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Data\DirectCPQ_IPRouting\" />
-    <Folder Include="Data\DirectCPQ_NokiaSoftware\" />
-    <Folder Include="Data\DirectCPQ_QTC\" />
     <Folder Include="Models\" />
   </ItemGroup>
 
