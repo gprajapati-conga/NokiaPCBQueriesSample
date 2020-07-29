@@ -57,6 +57,7 @@ namespace NokiaPCBQueriesSample
                 { "NokiaCPQ_Maintenance_Level__c", string.Empty },
                 { "Apttus_Proposal__Account__r.Partner_Program__c", "GPP 3.0" }
             });
+
             var nokiaMaintenanceAndSSPRulesQuery = QueryHelper.GetNokiaMaintenanceAndSSPRulesQuery(proposal);
             var nokiaMaintenanceSSPRules = await dBHelper.FindAsync<NokiaMaintenanceAndSSPRulesQueryModel>(nokiaMaintenanceAndSSPRulesQuery);
 

@@ -28,21 +28,48 @@ namespace NokiaPCBQueriesSample
     {
         static void Main(string[] args)
         {
-            string folderName = "IndirectCPQ-507";
+            string quoteType = "Chandresh";
+            string portfolio = "POSTTest";
 
             IApttusOpenTracer apttusOpenTracer = SetupTestTracer();
             var mongoOperation = GetMongoProvider(apttusOpenTracer);
 
-            //var propJson = File.ReadAllText(@"Data\Proposal.json");
-            //Proposal propObject = new Proposal(Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, object>>(propJson));
-
-            //var proposal = batchPriceRequest.Cart.Get<Proposal>("Apttus_QPConfig__Proposald__r");
-
-            var propJson = File.ReadAllText(@$"Data\{folderName}\Proposal.json");
+            var propJson = File.ReadAllText(@$"Data\{quoteType}\Proposal.json");
             Proposal propObject = Newtonsoft.Json.JsonConvert.DeserializeObject<Proposal>(propJson);
 
-            var lineItemsJson = File.ReadAllText(@$"Data\{folderName}\LineItems.json");
+            var lineItemsJson = File.ReadAllText(@$"Data\{quoteType}\207_AddlineItem.json");
             var lineItems = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Apttus.Lightsaber.Pricing.Common.Entities.LineItem>>(lineItemsJson);
+
+            //var propJson = File.ReadAllText(@$"Data\{quoteType}\{portfolio}\Proposal.json");
+            //Proposal propObject = Newtonsoft.Json.JsonConvert.DeserializeObject<Proposal>(propJson);
+
+            //var lineItemsJson = File.ReadAllText(@$"Data\{quoteType}\{portfolio}\LineItems.json");
+            //var lineItems = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Apttus.Lightsaber.Pricing.Common.Entities.LineItem>>(lineItemsJson);
+
+            // Generate batch files
+
+            //List<IEnumerable<Apttus.Lightsaber.Pricing.Common.Entities.LineItem>> lineItemsGroup = 
+            //    new List<IEnumerable<Apttus.Lightsaber.Pricing.Common.Entities.LineItem>>();
+            //var batchSize = 50;
+            //var skip = 0;
+
+            //while (skip < lineItems.Count)
+            //{
+            //    var lItems = lineItems.Skip(skip).Take(batchSize);
+            //    skip = skip + lItems.Count();
+
+            //    lineItemsGroup.Add(lItems);
+            //}
+
+            //List<List<Apttus.Lightsaber.Pricing.Common.Entities.LineItem>> lineItemsGroup = SplitIntoChunks(lineItems, 50);
+
+            //int index = 1;
+            //foreach(var lineItemsg in lineItemsGroup)
+            //{
+            //    File.WriteAllText(@$"Data\Output\Batch-{index}.json", Newtonsoft.Json.JsonConvert.SerializeObject(lineItemsg));
+            //    index++;
+            //}  
+
             var lineItemsModel = lineItems.Select(li => new LineItemModel(li, new PriceListItemModel(li.PriceListItem))).ToList();
             var numbers = Enumerable.Range(1, lineItemsModel.Count);
             List<ProductLineItemModel> productLineItemModels = new List<ProductLineItemModel>();
@@ -53,8 +80,7 @@ namespace NokiaPCBQueriesSample
             }
 
             var batchPriceRequest = new BatchPriceRequest { Cart = new ProductConfigurationModel(new ProductConfiguration()), CartId = "cart1", LineItems = productLineItemModels };
-            //batchPriceRequest.Cart.Set("Apttus_Proposal__Proposal__c", Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, object>>(propJson));
-            batchPriceRequest.Cart.Set("Apttus_Proposal__Proposal__c", propObject);
+            batchPriceRequest.Cart.Set(Apttus.Lightsaber.Nokia.Common.Constants.PROPOSAL_CONFIG_RELATIONSHIP_NAME, propObject);
 
             batchPriceRequest.CartContext = new CartContext();
             batchPriceRequest.CartContext.LineItems = productLineItemModels;
@@ -141,6 +167,23 @@ namespace NokiaPCBQueriesSample
             var iTracer = OpenTracingExtensions.SetupOpenTracing("DUMMY", openTracerType,
                 isTracingEnable, isLoggingEnable, minLogLevel);
             return iTracer;
+        }
+
+        public static List<List<T>> SplitIntoChunks<T>(List<T> list, int chunkSize)
+        {
+            if (chunkSize <= 0)
+            {
+                throw new ArgumentException("Chunk size must be greater than 0");
+            }
+            List<List<T>> retVal = new List<List<T>>();
+            int index = 0;
+            while (index < list.Count)
+            {
+                int count = list.Count - index > chunkSize ? chunkSize : list.Count - index;
+                retVal.Add(list.GetRange(index, count));
+                index += chunkSize;
+            }
+            return retVal;
         }
     }
 }

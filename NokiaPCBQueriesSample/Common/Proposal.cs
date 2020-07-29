@@ -1,4 +1,5 @@
 ﻿using Apttus.Lightsaber.Pricing.Common.Entities;
+using Apttus.Lightsaber.Pricing.Common.Models;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -9,9 +10,20 @@ namespace Apttus.Lightsaber.Nokia.Common
     [JsonConverter(typeof(BaseEntitySerializer))]
     public class Proposal : BaseEntity
     {
-        public Proposal()
-        {
+        public Proposal() : base(Constants.PROPOSAL) { }
+        public Proposal(Dictionary<string, object> dbObject) : base(Constants.PROPOSAL, dbObject) { }
 
+        public static Proposal Create(ProductConfigurationModel cart)
+        {
+            var proposalEntity = cart.Get<BaseEntity>(Constants.PROPOSAL_CONFIG_RELATIONSHIP_NAME);
+            var proposalEntityDict = new Dictionary<string, object>();
+
+            if(proposalEntity != null)
+            {
+                proposalEntityDict = proposalEntity.ToDictionary();
+            }
+
+            return new Proposal(proposalEntityDict);
         }
 
         public string NokiaCPQ_Portfolio__c
@@ -38,15 +50,15 @@ namespace Apttus.Lightsaber.Nokia.Common
             }
         }
 
-        public string NokiaCPQ_No_of_Years__c
+        public string NokiaCPQ_No_Of_Years__c
         {
             get
             {
-                return GetValue<string>(ProposalField.NokiaCPQ_No_of_Years__c);
+                return GetValue<string>(ProposalField.NokiaCPQ_No_Of_Years__c);
             }
             set
             {
-                SetValue(ProposalField.NokiaCPQ_No_of_Years__c, value);
+                SetValue(ProposalField.NokiaCPQ_No_Of_Years__c, value);
             }
         }
 
@@ -422,34 +434,16 @@ namespace Apttus.Lightsaber.Nokia.Common
             }
         }
 
-        public string Warranty_credit__c
+        public string Warranty_Credit__c
         {
             get
             {
-                return GetValue<string>(ProposalField.Warranty_credit__c);
+                return GetValue<string>(ProposalField.Warranty_Credit__c);
             }
             set
             {
-                SetValue(ProposalField.Warranty_credit__c, value);
+                SetValue(ProposalField.Warranty_Credit__c, value);
             }
-        }
-
-
-        private readonly Dictionary<string, object> proposal;
-
-        public Proposal(Dictionary<string, object> proposal)
-        {
-            this.proposal = proposal;
-        }
-
-        public T Get<T>(string fieldName)
-        {
-            return (T)proposal[fieldName];
-        }
-
-        public object Get(string fieldName)
-        {
-            return proposal[fieldName];
         }
     }
 }

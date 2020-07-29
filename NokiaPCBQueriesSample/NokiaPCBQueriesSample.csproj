@@ -16,6 +16,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Data\Chandresh\1_41_AddLineItem.json" />
+    <None Remove="Data\Chandresh\207_AddlineItem.json" />
+    <None Remove="Data\Chandresh\207_CartInitPayload.json" />
+    <None Remove="Data\Chandresh\2_41_AddLineItem.json" />
+    <None Remove="Data\Chandresh\3_41_AddLineItem.json" />
+    <None Remove="Data\Chandresh\4_41_AddLineItem.json" />
+    <None Remove="Data\Chandresh\5_43_AddLineItem.json" />
+    <None Remove="Data\Chandresh\Proposal.json" />
     <None Remove="Data\DirectCPQ\LineItems.json" />
     <None Remove="Data\DirectCPQ\Proposal.json" />
     <None Remove="Data\DirectDS\LineItems.json" />
@@ -32,6 +40,30 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Data\Chandresh\1_41_AddLineItem.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Chandresh\207_AddlineItem.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Chandresh\207_CartInitPayload.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Chandresh\2_41_AddLineItem.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Chandresh\3_41_AddLineItem.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Chandresh\4_41_AddLineItem.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Chandresh\5_43_AddLineItem.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Chandresh\Proposal.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Data\DirectCPQ\NokiaSoftware\LineItems.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
