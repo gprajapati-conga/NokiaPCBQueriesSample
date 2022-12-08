@@ -143,7 +143,7 @@
     <PackageReference Include="Apttus.Lightsaber.MongoProvider" Version="1.0.0.26" />
     <PackageReference Include="Apttus.Lightsaber.Pricing.Common" Version="2020.8.0.21" />
     <PackageReference Include="Apttus.OpenTracingTelemetry" Version="1.0.0.15" />
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
   </ItemGroup>
 
   <ItemGroup>
